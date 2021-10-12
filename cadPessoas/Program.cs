@@ -103,6 +103,7 @@ namespace cadPessoas
             Console.WriteLine("Informe o nome para a busca");
             string buscar = Console.ReadLine();
 
+            Console.WriteLine("Nome encontrado: " + listaRecebida.Contains(buscar));
             Console.ReadKey();
         }
         static void Main(string[] args)
@@ -116,19 +117,19 @@ namespace cadPessoas
                 switch (ocp)
                 {
                     case "1":
-                        listaPessoa.Add( pessoas.receberDados() )
+                        listaPessoa.Add(pessoas.receberDados());
                         break;
 
                     case "2":
-                        listaPessoa.Add( listaPessoa )
+                        listaPessoa.Add(pessoas.listarDados());
                         break;
 
                     case "3":
-                        listaPessoa.Add( listaPessoa )
+                        listaPessoa.Add(pessoas.contaRegistros());
                         break;
 
                     case "4":
-                        listaPessoa.Add( listaPessoa )
+                        listaPessoa.Add(pessoas.buscaDados());
                         break;
                 }
             }
